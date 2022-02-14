@@ -1,24 +1,22 @@
 package es.voiping.hass.controller.helpers;
 
 import com.github.dockerjava.api.DockerClient;
-import com.github.dockerjava.api.command.CreateNetworkCmd;
 import com.github.dockerjava.api.command.CreateNetworkResponse;
-import com.github.dockerjava.api.command.RemoveNetworkCmd;
 import com.github.dockerjava.api.model.PruneType;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
 import com.github.dockerjava.core.DockerClientBuilder;
 import com.github.dockerjava.core.DockerClientConfig;
 import org.apache.log4j.Logger;
 
-public class NetworkHelper {
-    private static final Logger logger = Logger.getLogger("NetworkHelper");
+public class NetworksHelper {
+    private static final Logger logger = Logger.getLogger("NetworksHelper");
 
     private DockerClient dockerClient;
-    public NetworkHelper(DockerClient dockerClient) {
+    public NetworksHelper(DockerClient dockerClient) {
         this.dockerClient = dockerClient;
     }
 
-    public NetworkHelper() {
+    public NetworksHelper() {
         DockerClientConfig clientConfig = DefaultDockerClientConfig.createDefaultConfigBuilder()
                 .withDockerHost("tcp://10.0.122.174:2375")
                 .withDockerTlsVerify(false)

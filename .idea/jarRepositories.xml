@@ -19,6 +19,11 @@
     <remote-repository>
       <option name="id" value="localrepository" />
       <option name="name" value="localrepository" />
+      <option name="url" value="file://C:\\Users/evizu/.m2/repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="localrepository" />
+      <option name="name" value="localrepository" />
       <option name="url" value="file://$MAVEN_REPOSITORY$" />
     </remote-repository>
   </component>
